@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.4.4-24-g24328f6  Build Version: 1.5.7084.36479
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ROBOT3DOF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 0.000734019950536319 0.0182146247785747"
+        rpy="0 0 0" />
+      <mass
+        value="0.390546351913761" />
+      <inertia
+        ixx="0.000433142119189262"
+        ixy="5.85412636049671E-21"
+        ixz="3.60322986082196E-20"
+        iyy="0.000588529745204659"
+        iyz="1.36826497561383E-06"
+        izz="0.000821776936803002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L1">
+    <inertial>
+      <origin
+        xyz="-1.19767229930789E-05 -5.60334834087683E-11 0.0742814867092415"
+        rpy="0 0 0" />
+      <mass
+        value="0.152127065742925" />
+      <inertia
+        ixx="0.000170878651989639"
+        ixy="1.73749677917352E-13"
+        ixz="3.50143046249832E-08"
+        iyy="0.000175281606401285"
+        iyz="-9.21649289159926E-12"
+        izz="4.41254717941588E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="q1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.01"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1" />
+    <axis
+      xyz="0 0 1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L2">
+    <inertial>
+      <origin
+        xyz="0.0863385190408666 -1.29323954323191E-10 -1.71780373259267E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.444092336946675" />
+      <inertia
+        ixx="0.000317547693441852"
+        ixy="1.17720821113016E-11"
+        ixz="-9.05924708954444E-11"
+        iyy="0.00118834565949055"
+        iyz="1.9249218619524E-12"
+        izz="0.00104038594340033" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/L2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/L2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="q2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.0935"
+      rpy="1.5708 -0.0060095 1.5708" />
+    <parent
+      link="L1" />
+    <child
+      link="L2" />
+    <axis
+      xyz="0 0 -1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L3">
+    <inertial>
+      <origin
+        xyz="0.08880866919622 -8.63632665382141E-10 2.86037415975215E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.253295592920133" />
+      <inertia
+        ixx="6.46844441080573E-05"
+        ixy="-8.60817283808103E-12"
+        ixz="1.6747583235886E-12"
+        iyy="0.000921005263138876"
+        iyz="-8.76187470138653E-12"
+        izz="0.000893253683336295" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/L3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/L3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="q3"
+    type="continuous">
+    <origin
+      xyz="0.14865 0 0"
+      rpy="0 0 -0.0060095" />
+    <parent
+      link="L2" />
+    <child
+      link="L3" />
+    <axis
+      xyz="0 0 1" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="end">
+    <inertial>
+      <origin
+        xyz="0.0147484904292653 0.00749999999999999 0.02"
+        rpy="0 0 0" />
+      <mass
+        value="0.0170269364589862" />
+      <inertia
+        ixx="8.17787639482355E-07"
+        ixy="1.10746842051528E-21"
+        ixz="-5.82335151237331E-22"
+        iyy="2.99519068260753E-06"
+        iyz="2.54403797783613E-13"
+        izz="2.81591172974231E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/end.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT3DOF/meshes/end.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="e"
+    type="fixed">
+    <origin
+      xyz="0.1975 -0.0075 -0.02"
+      rpy="0 0 0" />
+    <parent
+      link="L3" />
+    <child
+      link="end" />
+    <axis
+      xyz="0 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>
