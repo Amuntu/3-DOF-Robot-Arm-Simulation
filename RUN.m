@@ -1,8 +1,7 @@
 %Use this function to run everything correctly
-addpath('C:\Users\ASUS\Desktop\WORK\3DOF\URDF\ROBOT3DOF\urdf');
-addpath('C:\Users\ASUS\Desktop\WORK\3DOF\GUI');
-addpath('C:\Users\ASUS\Desktop\WORK\3DOF\Kinematics');
-addpath('C:\Users\ASUS\Desktop\WORK\3DOF\Arduino');
+addpath('\URDF\ROBOT3DOF\urdf');
+addpath('\GUI');
+addpath('\Kinematics');
 
 answer = StartUp;
 switch answer
